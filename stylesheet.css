@@ -1,0 +1,71 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  height: 1000px;
+  background-color: #262626;
+  display: block;
+}
+#ball{
+  position: relative;
+  background-color: #f0f0f0;
+  width: 300px;
+  height: 300px;
+  border-radius:100%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(135deg);
+  animation-name: shake;
+  animation-duration: 500ms;
+  animation-delay:500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 5;
+}
+#latch {
+    position: absolute;
+    z-index: 6;
+    background-color: #222224;
+    height: 50px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#red{
+  position:absolute;
+  z-index:3;
+  background-color: #f00000;
+  top: 50%;
+  border-radius: 0 0 225px 225px;
+  height: 50%;
+  width: 100%;
+}
+#latchBuckle{
+  z-index:9;
+  width:90px;
+  height: 90px;
+  background-color: #222224;
+  border-radius:100%;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#button{
+  z-index:10;
+  width:70px;
+  height: 70px;
+  background-color: #f0f0f0;
+  border-radius:100%;
+  position: relative;
+  margin: 0 auto;
+  top: 20%;
+  transform: translateY(-50%);
+}
+@keyframes shake {
+  0% {transform: rotate(135deg);}
+  25% {transform: rotate(145deg) translateY(-10%) translateX(-20%);}
+  50% {transform: rotate(135deg);}
+  75% {transform: rotate(145deg) translateY(-10%) translateX(-20%);}
+  100% {transform: rotate(135deg);}
+}
