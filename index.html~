@@ -4,18 +4,15 @@
   <head>
     <title>Pokeball</title>
     <link href="stylesheet.css" type="text/css" rel="stylesheet">
-    
+    <script src="script.js"></script>
   </head>
   <body>
-    <div id="ball">
+    <div class="ball">
       <div id="latch"></div>
       <div id="red"></div>
       <div id="latchBuckle"></div>
       <div id="button"></div>
     </div>
-    <br>
-    <div id="button2">click me!</div>
-    <script src="script.js" ></script>
   </body>
 </html>
   

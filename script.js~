@@ -1,0 +1,15 @@
+function play() { 
+  document.querySelector(".ball").className = "ball"; 
+  window.requestAnimationFrame(function(time) { 
+    window.requestAnimationFrame(function(time) { 
+      document.querySelector(".ball").className = "ball shaking";
+    }); 
+  }); 
+} 
+document.getElementById("#button").addEventListener("click", play, false); 
+
+
+function(time) { 
+  window.requestAnimationFrame(function(time) { 
+    document.querySelector(".ball").className = "ball shaking";
+}); 
