@@ -14,26 +14,62 @@ body{
   width: 300px;
   height: 300px;
   border-radius:100%;
-  transform: rotate(135deg);
+  z-index: 2;
+  transform: rotate(145deg) translateY(-10%) translateX(-10%);
+  transition: all 1s linear 500ms;
 }
 .shaking{
   animation-name: shake;
-  animation-duration: 600ms;
+  animation-duration: 1800ms;
   animation-timing-function: ease-in-out;
-  animation-delay:400ms;
-  animation-iteration-count: 3;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
 }
 @keyframes shake {
-  0% {transform: rotate(135deg);}
-  25% {transform: rotate(145deg) translateY(-10%) translateX(-20%);}
-  50% {transform: rotate(135deg);}
-  75% {transform: rotate(145deg) translateY(-10%) translateX(-20%);}
-  100% {transform: rotate(135deg);}
+  
+  0% {transform: rotate(145deg) translateY(-10%) translateX(-10%);}
+  10% {transform: rotate(125deg) translateY(10%) translateX(10%);}
+  20% {transform: rotate(145deg) translateY(-10%) translateX(-10%);}
+  30% {transform: rotate(125deg) translateY(10%) translateX(10%);}
+  40% {transform: rotate(145deg) translateY(-10%) translateX(-10%);}
+  50% {transform: rotate(125deg) translateY(10%) translateX(10%);}
+  60% {transform: rotate(145deg) translateY(-10%) translateX(-10%);}
+  70% {transform: rotate(125deg) translateY(10%) translateX(10%);}
+  80% {transform: rotate(145deg) translateY(-10%) translateX(-10%);}
+  90% {transform: rotate(125deg) translateY(10%) translateX(10%);}
+  100% {transform: rotate(145deg) translateY(-10%) translateX(-10%);}
+}
+
+.leveling{
+  transition-name: levelOut;
+  transition-duration: 1000ms;
+  transition-timing-function: linear;
+  transition-delay: 500ms;
+  transition-iteration-count: 1;
+}
+#ball:hover{
+  transform: rotate(180deg);
+}
+.unLevel{
+  animation-name: unLevel;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  animation-delay: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes unLevel{
+  0%{transform: rotate(180deg);}
+  20%{transform: rotate(173deg);}
+  40%{transform: rotate(166deg);}
+  60%{transform: rotate(159deg);}
+  80%{transform: rotate(152deg);}
+  100%{transform: rotate(145deg);}
 }
 
 #latch {
     position: absolute;
-    z-index: 6;
+    z-index: 4;
     background-color: #222224;
     height: 50px;
     width: 100%;
@@ -50,7 +86,7 @@ body{
   width: 100%;
 }
 #latchBuckle{
-  z-index:9;
+  z-index:5;
   width:90px;
   height: 90px;
   background-color: #222224;
@@ -61,7 +97,7 @@ body{
   transform: translateY(-50%);
 }
 #button{
-  z-index:10;
+  z-index:6;
   width:70px;
   height: 70px;
   background-color: #f0f0f0;
@@ -72,14 +108,28 @@ body{
   transform: translateY(-50%);
   cursor: pointer;
 }
-#button2{
-  display: block;
-  height: 50px;
-  width: 100px;
-  margin: 30px;
-  border: solid orange 10px;
-  background-color: gray;
-  cursor: pointer;
-  text-align: center;
+.flashing{
+  animation-name: flash;
+  animation-duration: 1800ms;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
 }
-
+@keyframes flash {
+  
+  10% {background-color: #f00000;}
+  20% {background-color: #f0f0f0;}
+  30% {background-color: #f00000;}
+  40% {background-color: #f0f0f0;}
+  50% {background-color: #f00000;}
+  60% {background-color: #f0f0f0;}
+  70% {background-color: #f00000;}
+  80% {background-color: #f0f0f0;}
+  90% {background-color: #f00000;}
+  100% {background-color: #f0f0f0;}
+}
+#openBall{
+  visibility: hidden;
+  display: none;
+  z-index: 10;
+}

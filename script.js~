@@ -1,15 +1,9 @@
-function play() { 
-  document.querySelector(".ball").className = "ball"; 
-  window.requestAnimationFrame(function(time) { 
-    window.requestAnimationFrame(function(time) { 
-      document.querySelector(".ball").className = "ball shaking";
-    }); 
-  }); 
+const button = document.getElementById('button2');
+const ball = document.getElementById('ball');
+function shake(){
+  ball.classList.add("shaking");
+  button.innerHTML= "fuck me";
 } 
-document.getElementById("#button").addEventListener("click", play, false); 
+button.addEventListener("click", shake, true); 
 
 
-function(time) { 
-  window.requestAnimationFrame(function(time) { 
-    document.querySelector(".ball").className = "ball shaking";
-}); 
